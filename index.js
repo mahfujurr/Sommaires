@@ -60,7 +60,7 @@ async function run() {
                 to: `${data?.to}`,
                 cc: `${data?.cc}`,
                 subject: `${data?.itemParsed?.subject} ${data?.date}`,
-                html: `
+                html: ` 
                 <!DOCTYPE html>
                 <html>
 
