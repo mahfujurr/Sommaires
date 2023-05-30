@@ -1,0 +1,81 @@
+<tr class="information">
+                                <td colspan="2">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                NOM CLIENT LIVRAISON : <br />
+                                                Adresse Livraison : <br />
+                                                Code putal :<br />
+                                                Ville : <br />
+                                                Téléphone : <br />
+                                                Email : <br />
+                                            </td>
+
+                                            <td>
+                                                NOM CLIENT FACTURATION : <br />
+                                                Adresse Livraison : <br />
+                                                Code putal :<br />
+                                                Ville : <br />
+                                                Téléphone : <br />
+                                                Email : <br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr class="top">
+                                <td colspan="2">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                PREPARATION DE BON DE COMMANDE<br />
+                                                Date : <br />
+                                                VALIDITE : 10 JOURS<br />
+                                                CHARGE DE COMPTE : 
+                                            </td>
+                                            <td class="title">
+                                                <img src="" style="width: 100%; max-width: 300px" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+
+                            <tr class="item">
+                                <td></td>
+
+                                <td>€</td>
+                            </tr>
+                            <tr class="item">
+                                <td></td>
+
+                                <td>€ </td>
+                            </tr>
+                            <tr class="item">
+                                <td></td>
+
+                                <td>€</td>
+                            </tr>
+                            <tr class="item">
+                                <td></td>
+
+                                <td>€ </td>
+                            </tr>
+                            <tr class="item">
+                                <td></td>
+
+                                <td>€ </td>
+                            </tr>
+
+                            <tr class="total">
+                                <td>GRAND TOTAL H.T</td>
+
+                                <td>€ </td>
+                            </tr>
+                            <tr class="total">
+                                <td>TOTAL T.T.C </td>
+
+                                <td>€ </td>
+                            </tr>
