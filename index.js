@@ -132,9 +132,7 @@ async function run() {
                         }
 
                         .invoice-box table tr.item td {
-                            border-bottom: 1px solid #eee;
-                            
-
+                            border-bottom: 1px solid black;
                         }
 
                         .invoice-box table tr.item.last td {
