@@ -75,7 +75,7 @@ async function run() {
                             max-width: 100%;
                             margin: auto;
                             
-                            border: 1px solid black;
+                            
                             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
                             font-size: 14px;
                             line-height: 20px;
@@ -146,19 +146,7 @@ async function run() {
                             font-weight: bold;
                         }
 
-                        @media only screen and (max-width: 600px) {
-                            .invoice-box table tr.top table td {
-                                width: 100%;
-                                display: block;
-                                text-align: center;
-                            }
-
-                            .invoice-box table tr.information table td {
-                                width: 100%;
-                                display: block;
-                                text-align: center;
-                            }
-                        }
+                        
 
                         /** RTL **/
                         .invoice-box.rtl {
@@ -358,7 +346,7 @@ async function run() {
                         max-width: 100%;
                         margin: auto;
                         
-                        border: 1px solid black;
+                        
                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
                         font-size: 14px;
                         line-height: 20px;
