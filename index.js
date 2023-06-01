@@ -358,6 +358,7 @@ async function run() {
                         width: 100%;
                         line-height: inherit;
                         text-align: center;
+                        border: 1px solid black;
                     }
 
                     .invoice-box table td {
@@ -402,9 +403,7 @@ async function run() {
                     }
 
                     .invoice-box table tr.item td {
-                        border-bottom: 1px solid #eee;
-                        
-
+                        border-bottom: 1px solid black;
                     }
 
                     .invoice-box table tr.item.last td {
@@ -416,19 +415,7 @@ async function run() {
                         font-weight: bold;
                     }
 
-                    @media only screen and (max-width: 600px) {
-                        .invoice-box table tr.top table td {
-                            width: 100%;
-                            display: block;
-                            text-align: center;
-                        }
-
-                        .invoice-box table tr.information table td {
-                            width: 100%;
-                            display: block;
-                            text-align: center;
-                        }
-                    }
+                    
 
                     /** RTL **/
                     .invoice-box.rtl {
