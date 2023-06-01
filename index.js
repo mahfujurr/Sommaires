@@ -1,4 +1,5 @@
 const express = require('express');
+
 var nodemailer = require("nodemailer");
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
@@ -28,7 +29,7 @@ async function run() {
             // const query = { _id: new ObjectId(id) };
             // const result = await mail.updateOne(query, { $set: data });
             // res.send(data);
-            // console.log(data);
+            // console.log(file);
             function convertObjectToUppercase(obj) {
                 const convertedObj = {};
 
@@ -44,8 +45,9 @@ async function run() {
             }
 
 
-            const uppercaseObject = convertObjectToUppercase(data?.itemParsed);
-            console.log(uppercaseObject);
+            const uppercaseObject = convertObjectToUppercase(data?.data);
+            // console.log(uppercaseObject);
+            console.log(data);
 
             const transporter = nodemailer.createTransport({
                 service: "gmail",
@@ -59,7 +61,7 @@ async function run() {
                 from: "transportamd1997@gmail.com",
                 to: `${data?.to}`,
                 cc: `${data?.cc}`,
-                subject: `${data?.itemParsed?.subject} ${data?.date}`,
+                subject: `${data?.data?.subject} ${data?.date}`,
                 html: ` 
                 <!DOCTYPE html>
                 <html>
@@ -70,7 +72,7 @@ async function run() {
 
                     <style>
                         .invoice-box {
-                            max-width: 800px;
+                            max-width: 100%;
                             margin: auto;
                             padding: 1px;
                             border: 1px solid black;
@@ -127,6 +129,7 @@ async function run() {
 
                         .invoice-box table tr.item td {
                             border-bottom: 1px solid #eee;
+                            
 
                         }
 
@@ -168,13 +171,22 @@ async function run() {
                         }
                         .centertext{
                             text-align: start;
-                            font-size: 16px;
+                            font-size: 13px;
                         }
+                        .signature{
+                            width: 50%;
+                            padding-top: 20px;
+                        }
+                        @media only screen and (max-width: 767px) {
+                            .signature {
+                              width: 100%;
+                            }
+                          }
                     </style>
                 </head>
 
                 <body>
-                <h5 class="centertext">${data?.text}</h5>
+                <h5 class="centertext">${data?.data?.text} (${data?.date})</h5>
                     <div class="invoice-box">
                         <table cellpadding="0" cellspacing="0">
                             
@@ -271,6 +283,7 @@ async function run() {
                             </tr>
                         </table>
                     </div>
+                    <img class='signature' src=${data?.itemParsedImgURL} alt="">
                 </body>
 
                 </html>
@@ -311,7 +324,7 @@ async function run() {
             }
 
 
-            const uppercaseObjectd = convertObjectToUppercased(data?.itemParsedd);
+            const uppercaseObjectd = convertObjectToUppercased(data?.datad);
             console.log(data);
 
 
@@ -327,7 +340,7 @@ async function run() {
                 from: "transportamd1997@gmail.com",
                 to: `${data?.tod}`,
                 cc: `${data?.ccd}`,
-                subject: `${data?.itemParsedd?.subjectd} ${data?.dated}`,
+                subject: `${data?.datad?.subjectd} ${data?.dated}`,
                 html: `
                 <!DOCTYPE html>
                 <html>
@@ -437,11 +450,15 @@ async function run() {
                             text-align: start;
                             font-size: 16px;
                         }
+                        .signature{
+                            width: 50%;
+                            padding-top: 15px;
+                        }
                     </style>
                 </head>
 
                 <body>
-                <h5 class="centertext">${data?.textd}</h5>
+                <h5 class="centertext">${data?.datad?.textd} (${data?.dated})</h5>
                     <div class="invoice-box">
                         <table cellpadding="0" cellspacing="0">
                             
@@ -528,6 +545,7 @@ async function run() {
                             </tr>
                         </table>
                     </div>
+                    <img class='signature' src=${data?.itemParsedImgURL} alt="">
                 </body>
 
                 </html>
