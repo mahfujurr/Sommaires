@@ -90,6 +90,9 @@ async function run() {
                             text-align: center;
                             
                         }
+                        .invoice-box table tr {
+                            width: 100%;
+                        }
 
                         .invoice-box table td {
                             padding: 8px;
@@ -359,6 +362,10 @@ async function run() {
                         line-height: inherit;
                         text-align: center;
                         
+                    }
+                    
+                    .invoice-box table tr {
+                        width: 100%;
                     }
 
                     .invoice-box table td {
