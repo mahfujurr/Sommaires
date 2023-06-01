@@ -88,6 +88,7 @@ async function run() {
                             width: 100%;
                             line-height: inherit;
                             text-align: center;
+                            border: 1px solid black;
                         }
 
                         .invoice-box table td {
