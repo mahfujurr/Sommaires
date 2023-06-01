@@ -74,7 +74,7 @@ async function run() {
                         .invoice-box {
                             max-width: 100%;
                             margin: auto;
-                            padding: 1px;
+                            
                             border: 1px solid black;
                             box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
                             font-size: 14px;
@@ -115,14 +115,18 @@ async function run() {
                             padding-bottom: 40px;
                         }
 
+                        .heading{
+                            
+                            border: 1px solid black;
+                            
+                        }
                         .invoice-box table tr.heading td {
                             color: white;
                             background: black;
-                            border-bottom: 1px solid #ddd;
                             font-weight: bold;
-                            border: 1px solid white;
+                            border: 1px solid black;
                         }
-
+                       
                         .invoice-box table tr.details td {
                             padding-bottom: 20px;
                         }
@@ -271,7 +275,7 @@ async function run() {
                                 <td>${uppercaseObject.client8}</td>
                                 <td>${uppercaseObject.type8}</td>
                             </tr>
-                            <tr class="item">
+                            <tr class="item ">
                                 <td>${uppercaseObject.rang9}</td>
                                 <td>${uppercaseObject.chauffeur9}</td>
                                 <td>${uppercaseObject.camion9}</td>
@@ -350,110 +354,121 @@ async function run() {
                     <title>Summaire</title>
 
                     <style>
-                        .invoice-box {
-                            max-width: 800px;
-                            margin: auto;
-                            padding: 1px;
-                            border: 1px solid black;
-                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-                            font-size: 14px;
-                            line-height: 16px;
-                            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-                            color: #555;
+                    .invoice-box {
+                        max-width: 100%;
+                        margin: auto;
+                        
+                        border: 1px solid black;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+                        color: #555;
 
-                        }
+                    }
 
-                        .invoice-box table {
-                            width: 100%;
-                            line-height: inherit;
-                            text-align: center;
-                        }
+                    .invoice-box table {
+                        width: 100%;
+                        line-height: inherit;
+                        text-align: center;
+                    }
 
-                        .invoice-box table td {
-                            padding: 10px;
-                            vertical-align: top;
-                            border: 1px solid black;
+                    .invoice-box table td {
+                        padding: 8px;
+                        vertical-align: top;
+                        border: 1px solid black;
 
-                        }
+                    }
 
-                        .invoice-box table tr td:nth-child(2) {
-                            text-align: center;
-                        }
+                    .invoice-box table tr td:nth-child(2) {
+                        text-align: center;
+                    }
 
+                    .invoice-box table tr.top table td {
+                        padding-bottom: 20px;
+                    }
+
+                    .invoice-box table tr.top table td.title {
+                        font-size: 45px;
+                        line-height: 45px;
+                        color: #333;
+                    }
+
+                    .invoice-box table tr.information table td {
+                        padding-bottom: 40px;
+                    }
+
+                    .heading{
+                        
+                        border: 1px solid black;
+                        
+                    }
+                    .invoice-box table tr.heading td {
+                        color: white;
+                        background: black;
+                        font-weight: bold;
+                        border: 1px solid black;
+                    }
+                   
+                    .invoice-box table tr.details td {
+                        padding-bottom: 20px;
+                    }
+
+                    .invoice-box table tr.item td {
+                        border-bottom: 1px solid #eee;
+                        
+
+                    }
+
+                    .invoice-box table tr.item.last td {
+                        border-bottom: none;
+                    }
+
+                    .invoice-box table tr.total td:nth-child(2) {
+                        border-top: 2px solid #eee;
+                        font-weight: bold;
+                    }
+
+                    @media only screen and (max-width: 600px) {
                         .invoice-box table tr.top table td {
-                            padding-bottom: 20px;
-                        }
-
-                        .invoice-box table tr.top table td.title {
-                            font-size: 45px;
-                            line-height: 45px;
-                            color: #333;
+                            width: 100%;
+                            display: block;
+                            text-align: center;
                         }
 
                         .invoice-box table tr.information table td {
-                            padding-bottom: 40px;
-                        }
-
-                        .invoice-box table tr.heading td {
-                            color: white;
-                            background: black;
-                            border-bottom: 1px solid #ddd;
-                            font-weight: bold;
-                            border: 1px solid white;
-                        }
-
-                        .invoice-box table tr.details td {
-                            padding-bottom: 20px;
-                        }
-
-                        .invoice-box table tr.item td {
-                            border-bottom: 1px solid #eee;
-                        }
-
-                        .invoice-box table tr.item.last td {
-                            border-bottom: none;
-                        }
-
-                        .invoice-box table tr.total td:nth-child(2) {
-                            border-top: 2px solid #eee;
-                            font-weight: bold;
-                        }
-
-                        @media only screen and (max-width: 600px) {
-                            .invoice-box table tr.top table td {
-                                width: 100%;
-                                display: block;
-                                text-align: center;
-                            }
-
-                            .invoice-box table tr.information table td {
-                                width: 100%;
-                                display: block;
-                                text-align: center;
-                            }
-                        }
-
-                        /** RTL **/
-                        .invoice-box.rtl {
-                            direction: rtl;
-                            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-                        }
-
-                        .invoice-box.rtl table {
+                            width: 100%;
+                            display: block;
                             text-align: center;
                         }
+                    }
 
-                        .invoice-box.rtl table tr td:nth-child(2) {
-                            text-align: center;
+                    /** RTL **/
+                    .invoice-box.rtl {
+                        direction: rtl;
+                        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+                    }
+
+                    .invoice-box.rtl table {
+                        text-align: center;
+                    }
+
+                    .invoice-box.rtl table tr td:nth-child(2) {
+                        text-align: center;
+                    }
+                    .centertext{
+                        text-align: start;
+                        font-size: 13px;
+                    }
+                    .signature{
+                        width: 50%;
+                        padding-top: 20px;
+                    }
+                    @media only screen and (max-width: 767px) {
+                        .signature {
+                          width: 100%;
                         }
-                        .centertext{
-                            text-align: start;
-                            font-size: 16px;
-                        }
-                        .signature{
-                            width: 50%;
-                            padding-top: 15px;
-                        }
+                      }
                     </style>
                 </head>
 
@@ -474,7 +489,7 @@ async function run() {
                             <tr class="item">
 
                                 <td>${uppercaseObjectd?.chaffeurd2}</td>
-                                <td>${uppercaseObjectd?.us2 ? '✔' : '' } </td>
+                                <td>${uppercaseObjectd?.us2 ? '✔' : ''} </td>
                                 <td>${uppercaseObjectd?.camiond2}</td>
                                 <td>${uppercaseObjectd?.remorqued2}</td>
                                 <td>${uppercaseObjectd?.departd2}</td>
