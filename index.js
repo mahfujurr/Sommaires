@@ -58,7 +58,7 @@ async function run() {
             });
 
             const mailOptions = {
-                from: "transportamd1997@gmail.com",
+                from: "repartitionelz@gmail.com",
                 to: `${data?.to}`,
                 cc: `${data?.cc}`,
                 subject: `${data?.data?.subject} ${data?.date}`,
@@ -331,7 +331,7 @@ async function run() {
             });
 
             const mailOptions = {
-                from: "transportamd1997@gmail.com",
+                from: "repartitionelz@gmail.com",
                 to: `${data?.tod}`,
                 cc: `${data?.ccd}`,
                 subject: `${data?.datad?.subjectd} ${data?.dated}`,
