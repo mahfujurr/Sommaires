@@ -19,8 +19,24 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run() {
     try {
-        // const mail = client.db("stalkerbike").collection("sentmail");
+        const dispatchCollection = client.db("dispatch").collection("databasede");
 
+        app.post('/database', async (req, res) => {
+            const info = req.body;
+            const result = await dispatchCollection.insertOne(info);
+            res.send(result);
+        });
+        app.get('/database', async (req, res) => {
+            const query = {};
+            const result = await dispatchCollection.find(query).toArray();
+            res.send(result);
+        });
+        app.delete('/database/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: new ObjectId(id) };
+            const result = await dispatchCollection.deleteOne(query);
+            res.send(result);
+        })
 
         app.put("/mailsent", async (req, res) => {
 
@@ -560,7 +576,6 @@ async function run() {
 
         });
 
-        // ======================== commoplitan
 
 
 
